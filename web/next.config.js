@@ -96,7 +96,6 @@ const nextConfig = {
   // 实验性功能
   experimental: {
     // 启用服务器组件 (如果使用 App Router)
-    appDir: false, // 设为true如果使用app目录
   },
 }
 
