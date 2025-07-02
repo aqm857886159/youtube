@@ -239,7 +239,18 @@ export default async function handler(req, res) {
 async function processVideoPreview({ url, email, videoId, clientIP, userAgent }) {
   try {
     // 这里集成之前创建的 PreviewService
-    const { PreviewService } = await import('../../../preview_service.py');
+     const mockPreviewResult = {
+    success: true,
+    previewId: `preview_${Date.now()}`,
+    cost_analysis: {
+      total_cost_usd: 0.0007,
+      total_cost_cny: 0.005
+    },
+    pricing: {
+      suggested_price_usd: 0.91,
+      suggested_price_cny: 6.66
+    }
+  };
     
     // 创建安全的预览请求
     const previewService = new PreviewService();
