@@ -252,9 +252,7 @@ async function processVideoPreview({ url, email, videoId, clientIP, userAgent })
     }
   };
     
-    // 创建安全的预览请求
-    const previewService = new PreviewService();
-    const result = await previewService.preview_video(url, email);
+
     
     // 记录预览结果
     logSecurityEvent({
